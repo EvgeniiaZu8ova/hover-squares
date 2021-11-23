@@ -1,9 +1,10 @@
-import "./App.css";
 import Form from "../Form/Form";
+
+import style from "./App.module.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className={style.content}>
       <Form />
     </div>
   );

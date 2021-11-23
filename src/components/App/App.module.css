@@ -1,0 +1,9 @@
+.content {
+  font-family: "cmu_sans_serifmedium", "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 40px;
+}
