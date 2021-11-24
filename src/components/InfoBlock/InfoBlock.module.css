@@ -1,0 +1,24 @@
+.squaresInfo {
+  margin-left: 30px;
+}
+
+.title {
+  margin: 0 0 24px;
+}
+
+.infoBlocks {
+  display: grid;
+  row-gap: 8px;
+}
+
+.block {
+  height: 30px;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+  border: solid 1px rgb(219, 139, 11);
+  border-radius: 6px;
+  background-color: rgb(245, 230, 203);
+  color: rgb(219, 139, 11);
+  cursor: pointer;
+}

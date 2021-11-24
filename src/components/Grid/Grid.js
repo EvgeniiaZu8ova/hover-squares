@@ -1,12 +1,11 @@
 import React, { useCallback, useEffect, useState } from "react";
 import cn from "classnames";
 
+import { stringify, parse } from "../../utils/helpers";
+
 import style from "./Grid.module.css";
 
-const stringify = (rowIndex, colIndex) =>
-  JSON.stringify({ row: rowIndex, col: colIndex });
-
-function Grid({ fieldSize }) {
+function Grid({ fieldSize, getSquaresInfo }) {
   const [hoveredSquares, setHoveredSquares] = useState([]);
 
   const updateSquares = useCallback(
@@ -23,6 +22,11 @@ function Grid({ fieldSize }) {
   );
 
   useEffect(() => setHoveredSquares([]), [fieldSize]);
+
+  useEffect(
+    () => getSquaresInfo(hoveredSquares.map((el) => parse(el))),
+    [hoveredSquares, getSquaresInfo]
+  );
 
   return (
     <div className={style.grid}>

@@ -1,10 +1,16 @@
 .content {
   font-family: "cmu_sans_serifmedium", "Arial", sans-serif;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
   box-sizing: border-box;
   padding: 40px;
+}
+
+.gridField {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
