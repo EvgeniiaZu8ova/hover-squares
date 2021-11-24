@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import style from "./Form.module.css";
 
 function Form({ onSubmit }) {
   const [mode, setMode] = useState("easyMode");
 
-  function handleChange(e) {
+  const handleChange = useCallback((e) => {
     e.target.value && setMode(e.target.value);
-  }
+  }, []);
 
   return (
     <form noValidate onSubmit={(e) => onSubmit(e, mode)} className={style.form}>
