@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Form.module.css";
 
-function Form(props) {
+function Form({ onSubmit }) {
+  const [mode, setMode] = useState("easyMode");
+
+  function handleChange(e) {
+    e.target.value && setMode(e.target.value);
+  }
+
   return (
-    <form noValidate className={style.form}>
+    <form noValidate onSubmit={(e) => onSubmit(e, mode)} className={style.form}>
       <div className={style.selectWrapper}>
-        <select name="select-mode" className={style.selectMode}>
-          <option value="1">first</option>
-          <option value="2">second</option>
-          <option value="3">third</option>
-          <option value="4">fourth</option>
+        <select
+          name="select-mode"
+          onChange={handleChange}
+          className={style.selectMode}
+        >
+          <option value="">Pick mode</option>
+          <option value="easyMode">Easy mode</option>
+          <option value="normalMode">Normal Mode</option>
+          <option value="hardMode">Hard Mode</option>
         </select>
       </div>
       <button className={style.button}>Start</button>

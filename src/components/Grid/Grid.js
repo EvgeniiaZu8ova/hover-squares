@@ -1,15 +1,9 @@
 import React, { useEffect } from "react";
 
-import fetcher from "../../utils/fetcher";
-
 import style from "./Grid.module.css";
 
-function Grid(props) {
-  useEffect(() => {
-    fetcher()
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-  }, []);
+function Grid({ fieldSize }) {
+  useEffect(() => console.log(fieldSize), [fieldSize]);
 
   return <div className={style.grid}></div>;
 }
