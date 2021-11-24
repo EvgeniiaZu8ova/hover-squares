@@ -1,6 +1,22 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 20px);
-  grid-template-rows: repeat(5, 20px);
-  
+}
+
+.gridRow {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.gridCell {
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border: solid 1px black;
+  cursor: pointer;
+  background-color: #fff;
+  transition: 0.2s ease-out;
+}
+
+.gridCellActive {
+  background-color: #0091ff;
 }

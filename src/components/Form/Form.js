@@ -16,7 +16,7 @@ function Form({ onSubmit }) {
           onChange={handleChange}
           className={style.selectMode}
         >
-          <option value="">Pick mode</option>
+          <option value="">--Pick mode--</option>
           <option value="easyMode">Easy mode</option>
           <option value="normalMode">Normal Mode</option>
           <option value="hardMode">Hard Mode</option>
